@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "../styles/design-system.css";
+
+@theme inline {
+  --color-background: var(--joyedu-bg-primary);
+  --color-foreground: var(--joyedu-text-primary);
+  --font-sans: var(--joyedu-font-sans);
+  --font-mono: var(--joyedu-font-mono);
+}
+
+body {
+  background: var(--joyedu-bg-primary);
+  color: var(--joyedu-text-primary);
+  font-family: var(--joyedu-font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

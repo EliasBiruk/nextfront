@@ -1,0 +1,74 @@
+'use client';
+
+import DashboardLayout from '@/components/layout/DashboardLayout';
+import Card, { CardBody, CardTitle } from '@/components/shared/Card';
+import Link from 'next/link';
+import { useState } from 'react';
+
+export default function ExercisesBuilder() {
+  const [exercises, setExercises] = useState([
+    { id: 1, title: 'Variable Practice', difficulty: 'beginner', estimatedTime: '30 min' },
+  ]);
+
+  const [newExercise, setNewExercise] = useState({ title: '', difficulty: 'beginner', estimatedTime: '' });
+
+  const addExercise = () => {
+    if (newExercise.title) {
+      setExercises([...exercises, { ...newExercise, id: exercises.length + 1 }]);
+      setNewExercise({ title: '', difficulty: 'beginner', estimatedTime: '' });
+    }
+  };
+
+  return (
+    <DashboardLayout actor="instructor" userName="Dr. Smith" instructorType="joyedu">
+      <div className="mb-8">
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Exercises</h1>
+        <p className="text-gray-600">Create and manage hands-on exercises</p>
+      </div>
+
+      <div className="flex gap-2 mb-6">
+        <button
+          onClick={addExercise}
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
+        >
+          + Add Exercise
+        </button>
+        <Link
+          href="/instructor/builder/curriculum"
+          className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition font-medium"
+        >
+          Back to Curriculum
+        </Link>
+      </div>
+
+      <Card>
+        <CardBody>
+          <CardTitle>Hands-on Exercises</CardTitle>
+          <div className="space-y-4 mt-4">
+            {exercises.map((exercise) => (
+              <div key={exercise.id} className="p-4 border border-gray-200 rounded-lg">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold text-gray-900">{exercise.title}</h3>
+                    <div className="flex gap-4 mt-2 text-xs text-gray-600">
+                      <span>Difficulty: {exercise.difficulty}</span>
+                      <span>Time: {exercise.estimatedTime}</span>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <button className="px-3 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition text-sm">
+                      Edit
+                    </button>
+                    <button className="px-3 py-1 bg-red-100 text-red-700 rounded hover:bg-red-200 transition text-sm">
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardBody>
+      </Card>
+    </DashboardLayout>
+  );
+}

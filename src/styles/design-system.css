@@ -1,0 +1,441 @@
+/**
+ * JoyEdu Design System
+ * A comprehensive design system for consistent UI across the platform
+ */
+
+/* ========================================
+   COLOR SYSTEM
+   ======================================== */
+
+:root {
+  /* Primary Colors */
+  --joyedu-primary-50: #eff6ff;
+  --joyedu-primary-100: #dbeafe;
+  --joyedu-primary-200: #bfdbfe;
+  --joyedu-primary-300: #93c5fd;
+  --joyedu-primary-400: #60a5fa;
+  --joyedu-primary-500: #3b82f6;
+  --joyedu-primary-600: #2563eb;
+  --joyedu-primary-700: #1d4ed8;
+  --joyedu-primary-800: #1e40af;
+  --joyedu-primary-900: #1e3a8a;
+
+  /* Semantic Colors */
+  --joyedu-primary: var(--joyedu-primary-600);
+  --joyedu-primary-hover: var(--joyedu-primary-700);
+  --joyedu-primary-subtle: var(--joyedu-primary-50);
+
+  /* Secondary Colors */
+  --joyedu-secondary-50: #f8fafc;
+  --joyedu-secondary-100: #f1f5f9;
+  --joyedu-secondary-200: #e2e8f0;
+  --joyedu-secondary-300: #cbd5e1;
+  --joyedu-secondary-400: #94a3b8;
+  --joyedu-secondary-500: #64748b;
+  --joyedu-secondary-600: #475569;
+  --joyedu-secondary-700: #334155;
+  --joyedu-secondary-800: #1e293b;
+  --joyedu-secondary-900: #0f172a;
+
+  --joyedu-secondary: var(--joyedu-secondary-600);
+
+  /* Accent Colors */
+  --joyedu-accent-50: #fdf4ff;
+  --joyedu-accent-100: #fae8ff;
+  --joyedu-accent-200: #f5d0fe;
+  --joyedu-accent-300: #f0abfc;
+  --joyedu-accent-400: #e879f9;
+  --joyedu-accent-500: #d946ef;
+  --joyedu-accent-600: #c026d3;
+  --joyedu-accent-700: #a21caf;
+  --joyedu-accent-800: #86198f;
+  --joyedu-accent-900: #701a75;
+
+  --joyedu-accent: var(--joyedu-accent-600);
+
+  /* Background Colors */
+  --joyedu-bg-primary: #ffffff;
+  --joyedu-bg-secondary: #f8fafc;
+  --joyedu-bg-tertiary: #f1f5f9;
+  --joyedu-bg-elevated: #ffffff;
+  --joyedu-bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Surface Colors */
+  --joyedu-surface-1: #ffffff;
+  --joyedu-surface-2: #f8fafc;
+  --joyedu-surface-3: #f1f5f9;
+
+  /* Border Colors */
+  --joyedu-border-100: #e2e8f0;
+  --joyedu-border-200: #cbd5e1;
+  --joyedu-border-300: #94a3b8;
+  --joyedu-border: var(--joyedu-border-200);
+
+  /* Text Colors */
+  --joyedu-text-primary: #0f172a;
+  --joyedu-text-secondary: #475569;
+  --joyedu-text-tertiary: #64748b;
+  --joyedu-text-muted: #94a3b8;
+  --joyedu-text-inverse: #ffffff;
+
+  /* Status Colors */
+  --joyedu-success-50: #f0fdf4;
+  --joyedu-success-100: #dcfce7;
+  --joyedu-success-200: #bbf7d0;
+  --joyedu-success-300: #86efac;
+  --joyedu-success-400: #4ade80;
+  --joyedu-success-500: #22c55e;
+  --joyedu-success-600: #16a34a;
+  --joyedu-success-700: #15803d;
+  --joyedu-success-800: #166534;
+  --joyedu-success-900: #14532d;
+  --joyedu-success: var(--joyedu-success-600);
+  --joyedu-success-bg: var(--joyedu-success-50);
+  --joyedu-success-text: var(--joyedu-success-800);
+
+  --joyedu-warning-50: #fffbeb;
+  --joyedu-warning-100: #fef3c7;
+  --joyedu-warning-200: #fde68a;
+  --joyedu-warning-300: #fcd34d;
+  --joyedu-warning-400: #fbbf24;
+  --joyedu-warning-500: #f59e0b;
+  --joyedu-warning-600: #d97706;
+  --joyedu-warning-700: #b45309;
+  --joyedu-warning-800: #92400e;
+  --joyedu-warning-900: #78350f;
+  --joyedu-warning: var(--joyedu-warning-600);
+  --joyedu-warning-bg: var(--joyedu-warning-50);
+  --joyedu-warning-text: var(--joyedu-warning-800);
+
+  --joyedu-error-50: #fef2f2;
+  --joyedu-error-100: #fee2e2;
+  --joyedu-error-200: #fecaca;
+  --joyedu-error-300: #fca5a5;
+  --joyedu-error-400: #f87171;
+  --joyedu-error-500: #ef4444;
+  --joyedu-error-600: #dc2626;
+  --joyedu-error-700: #b91c1c;
+  --joyedu-error-800: #991b1b;
+  --joyedu-error-900: #7f1d1d;
+  --joyedu-error: var(--joyedu-error-600);
+  --joyedu-error-bg: var(--joyedu-error-50);
+  --joyedu-error-text: var(--joyedu-error-800);
+
+  --joyedu-info-50: #eff6ff;
+  --joyedu-info-100: #dbeafe;
+  --joyedu-info-200: #bfdbfe;
+  --joyedu-info-300: #93c5fd;
+  --joyedu-info-400: #60a5fa;
+  --joyedu-info-500: #3b82f6;
+  --joyedu-info-600: #2563eb;
+  --joyedu-info-700: #1d4ed8;
+  --joyedu-info-800: #1e40af;
+  --joyedu-info-900: #1e3a8a;
+  --joyedu-info: var(--joyedu-info-600);
+  --joyedu-info-bg: var(--joyedu-info-50);
+  --joyedu-info-text: var(--joyedu-info-800);
+}
+
+/* ========================================
+   TYPOGRAPHY SYSTEM
+   ======================================== */
+
+:root {
+  /* Font Families */
+  --joyedu-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --joyedu-font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+
+  /* Font Sizes */
+  --joyedu-text-xs: 0.75rem;      /* 12px */
+  --joyedu-text-sm: 0.875rem;     /* 14px */
+  --joyedu-text-base: 1rem;      /* 16px */
+  --joyedu-text-lg: 1.125rem;     /* 18px */
+  --joyedu-text-xl: 1.25rem;      /* 20px */
+  --joyedu-text-2xl: 1.5rem;      /* 24px */
+  --joyedu-text-3xl: 1.875rem;    /* 30px */
+  --joyedu-text-4xl: 2.25rem;     /* 36px */
+  --joyedu-text-5xl: 3rem;        /* 48px */
+  --joyedu-text-6xl: 3.75rem;     /* 60px */
+
+  /* Font Weights */
+  --joyedu-font-light: 300;
+  --joyedu-font-normal: 400;
+  --joyedu-font-medium: 500;
+  --joyedu-font-semibold: 600;
+  --joyedu-font-bold: 700;
+  --joyedu-font-extrabold: 800;
+
+  /* Line Heights */
+  --joyedu-leading-tight: 1.25;
+  --joyedu-leading-snug: 1.375;
+  --joyedu-leading-normal: 1.5;
+  --joyedu-leading-relaxed: 1.625;
+  --joyedu-leading-loose: 2;
+
+  /* Letter Spacing */
+  --joyedu-tracking-tighter: -0.05em;
+  --joyedu-tracking-tight: -0.025em;
+  --joyedu-tracking-normal: 0;
+  --joyedu-tracking-wide: 0.025em;
+  --joyedu-tracking-wider: 0.05em;
+  --joyedu-tracking-widest: 0.1em;
+}
+
+/* ========================================
+   SPACING SYSTEM
+   ======================================== */
+
+:root {
+  --joyedu-space-0: 0;
+  --joyedu-space-1: 0.25rem;   /* 4px */
+  --joyedu-space-2: 0.5rem;    /* 8px */
+  --joyedu-space-3: 0.75rem;   /* 12px */
+  --joyedu-space-4: 1rem;      /* 16px */
+  --joyedu-space-5: 1.25rem;   /* 20px */
+  --joyedu-space-6: 1.5rem;    /* 24px */
+  --joyedu-space-8: 2rem;      /* 32px */
+  --joyedu-space-10: 2.5rem;   /* 40px */
+  --joyedu-space-12: 3rem;     /* 48px */
+  --joyedu-space-16: 4rem;     /* 64px */
+  --joyedu-space-20: 5rem;     /* 80px */
+  --joyedu-space-24: 6rem;     /* 96px */
+}
+
+/* ========================================
+   BORDER RADIUS SYSTEM
+   ======================================== */
+
+:root {
+  --joyedu-radius-none: 0;
+  --joyedu-radius-sm: 0.25rem;    /* 4px */
+  --joyedu-radius-base: 0.375rem;  /* 6px */
+  --joyedu-radius-md: 0.5rem;     /* 8px */
+  --joyedu-radius-lg: 0.75rem;    /* 12px */
+  --joyedu-radius-xl: 1rem;       /* 16px */
+  --joyedu-radius-2xl: 1.5rem;    /* 24px */
+  --joyedu-radius-full: 9999px;
+}
+
+/* ========================================
+   SHADOW SYSTEM
+   ======================================== */
+
+:root {
+  --joyedu-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --joyedu-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --joyedu-shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --joyedu-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --joyedu-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --joyedu-shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --joyedu-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================
+   CONTAINER WIDTH SYSTEM
+   ======================================== */
+
+:root {
+  --joyedu-container-sm: 640px;
+  --joyedu-container-md: 768px;
+  --joyedu-container-lg: 1024px;
+  --joyedu-container-xl: 1280px;
+  --joyedu-container-2xl: 1536px;
+  --joyedu-container-full: 100%;
+}
+
+/* ========================================
+   BREAKPOINTS
+   ======================================== */
+
+:root {
+  --joyedu-breakpoint-sm: 640px;
+  --joyedu-breakpoint-md: 768px;
+  --joyedu-breakpoint-lg: 1024px;
+  --joyedu-breakpoint-xl: 1280px;
+  --joyedu-breakpoint-2xl: 1536px;
+}
+
+/* ========================================
+   TRANSITION SYSTEM
+   ======================================== */
+
+:root {
+  --joyedu-transition-fast: 150ms;
+  --joyedu-transition-base: 200ms;
+  --joyedu-transition-slow: 300ms;
+  --joyedu-transition-slower: 500ms;
+  --joyedu-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --joyedu-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --joyedu-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --joyedu-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   Z-INDEX SYSTEM
+   ======================================== */
+
+:root {
+  --joyedu-z-dropdown: 1000;
+  --joyedu-z-sticky: 1020;
+  --joyedu-z-fixed: 1030;
+  --joyedu-z-modal-backdrop: 1040;
+  --joyedu-z-modal: 1050;
+  --joyedu-z-popover: 1060;
+  --joyedu-z-tooltip: 1070;
+}
+
+/* ========================================
+   COMPONENT-SPECIFIC TOKENS
+   ======================================== */
+
+:root {
+  /* Header */
+  --joyedu-header-height: 64px;
+  --joyedu-header-bg: #ffffff;
+  --joyedu-header-border: var(--joyedu-border-200);
+
+  /* Sidebar */
+  --joyedu-sidebar-width: 256px;
+  --joyedu-sidebar-collapsed-width: 80px;
+  --joyedu-sidebar-bg: #ffffff;
+  --joyedu-sidebar-border: var(--joyedu-border-200);
+
+  /* Card */
+  --joyedu-card-radius: var(--joyedu-radius-lg);
+  --joyedu-card-shadow: var(--joyedu-shadow-sm);
+  --joyedu-card-border: var(--joyedu-border-200);
+  --joyedu-card-bg: var(--joyedu-surface-1);
+
+  /* Button */
+  --joyedu-button-height-sm: 32px;
+  --joyedu-button-height-md: 40px;
+  --joyedu-button-height-lg: 48px;
+  --joyedu-button-radius: var(--joyedu-radius-md);
+  --joyedu-button-font-weight: var(--joyedu-font-medium);
+
+  /* Input */
+  --joyedu-input-height-sm: 32px;
+  --joyedu-input-height-md: 40px;
+  --joyedu-input-height-lg: 48px;
+  --joyedu-input-radius: var(--joyedu-radius-md);
+  --joyedu-input-border: var(--joyedu-border-300);
+  --joyedu-input-border-focus: var(--joyedu-primary-500);
+
+  /* Badge */
+  --joyedu-badge-radius: var(--joyedu-radius-full);
+  --joyedu-badge-font-size: var(--joyedu-text-xs);
+  --joyedu-badge-font-weight: var(--joyedu-font-medium);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.joyedu-text-display {
+  font-family: var(--joyedu-font-sans);
+  font-size: var(--joyedu-text-6xl);
+  font-weight: var(--joyedu-font-bold);
+  line-height: var(--joyedu-leading-tight);
+  letter-spacing: var(--joyedu-tracking-tighter);
+}
+
+.joyedu-text-h1 {
+  font-family: var(--joyedu-font-sans);
+  font-size: var(--joyedu-text-4xl);
+  font-weight: var(--joyedu-font-bold);
+  line-height: var(--joyedu-leading-tight);
+  letter-spacing: var(--joyedu-tracking-tight);
+}
+
+.joyedu-text-h2 {
+  font-family: var(--joyedu-font-sans);
+  font-size: var(--joyedu-text-3xl);
+  font-weight: var(--joyedu-font-semibold);
+  line-height: var(--joyedu-leading-tight);
+  letter-spacing: var(--joyedu-tracking-tight);
+}
+
+.joyedu-text-h3 {
+  font-family: var(--joyedu-font-sans);
+  font-size: var(--joyedu-text-2xl);
+  font-weight: var(--joyedu-font-semibold);
+  line-height: var(--joyedu-leading-snug);
+}
+
+.joyedu-text-h4 {
+  font-family: var(--joyedu-font-sans);
+  font-size: var(--joyedu-text-xl);
+  font-weight: var(--joyedu-font-semibold);
+  line-height: var(--joyedu-leading-snug);
+}
+
+.joyedu-text-body {
+  font-family: var(--joyedu-font-sans);
+  font-size: var(--joyedu-text-base);
+  font-weight: var(--joyedu-font-normal);
+  line-height: var(--joyedu-leading-normal);
+}
+
+.joyedu-text-body-sm {
+  font-family: var(--joyedu-font-sans);
+  font-size: var(--joyedu-text-sm);
+  font-weight: var(--joyedu-font-normal);
+  line-height: var(--joyedu-leading-normal);
+}
+
+.joyedu-text-caption {
+  font-family: var(--joyedu-font-sans);
+  font-size: var(--joyedu-text-xs);
+  font-weight: var(--joyedu-font-normal);
+  line-height: var(--joyedu-leading-normal);
+  color: var(--joyedu-text-tertiary);
+}
+
+.joyedu-text-muted {
+  color: var(--joyedu-text-muted);
+}
+
+.joyedu-text-primary {
+  color: var(--joyedu-text-primary);
+}
+
+.joyedu-text-secondary {
+  color: var(--joyedu-text-secondary);
+}
+
+/* ========================================
+   DARK MODE SUPPORT
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --joyedu-bg-primary: #0f172a;
+    --joyedu-bg-secondary: #1e293b;
+    --joyedu-bg-tertiary: #334155;
+    --joyedu-bg-elevated: #1e293b;
+    --joyedu-bg-overlay: rgba(0, 0, 0, 0.7);
+
+    --joyedu-surface-1: #1e293b;
+    --joyedu-surface-2: #334155;
+    --joyedu-surface-3: #475569;
+
+    --joyedu-border-100: #334155;
+    --joyedu-border-200: #475569;
+    --joyedu-border-300: #64748b;
+    --joyedu-border: var(--joyedu-border-200);
+
+    --joyedu-text-primary: #f8fafc;
+    --joyedu-text-secondary: #cbd5e1;
+    --joyedu-text-tertiary: #94a3b8;
+    --joyedu-text-muted: #64748b;
+    --joyedu-text-inverse: #0f172a;
+
+    --joyedu-header-bg: #1e293b;
+    --joyedu-header-border: var(--joyedu-border-200);
+
+    --joyedu-sidebar-bg: #1e293b;
+    --joyedu-sidebar-border: var(--joyedu-border-200);
+
+    --joyedu-card-bg: var(--joyedu-surface-1);
+  }
+}
